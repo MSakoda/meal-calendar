@@ -239,6 +239,10 @@ h3 {
   color: #cfc6ba;
 }
 
+.dark .slot > span {
+  color: #eef6e9;
+}
+
 .icon-button,
 .segmented-toggle button,
 .period-actions button,
@@ -581,7 +585,7 @@ h3 {
 
 .slot > span,
 small {
-  color: #6f675e;
+  color: #3f463f;
   font-size: 0.76rem;
   text-transform: capitalize;
 }
