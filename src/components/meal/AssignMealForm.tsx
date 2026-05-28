@@ -55,7 +55,13 @@ export function AssignMealForm({
           </button>
         </div>
         <div className="field-row">
-          <input type="date" value={slotDraft.date} onChange={(event) => onChange({ ...slotDraft, date: event.target.value })} />
+          <input
+            aria-label="Assignment date"
+            key={slotDraft.date}
+            type="date"
+            value={slotDraft.date}
+            onChange={(event) => onChange({ ...slotDraft, date: event.target.value })}
+          />
           <select value={slotDraft.slot} onChange={(event) => onChange({ ...slotDraft, slot: event.target.value as MealType })}>
             {mealTypes.map((type) => (
               <option key={type}>{type}</option>
