@@ -516,12 +516,27 @@ h3 {
 .day-column {
   min-width: 0;
   border-radius: 8px;
-  background: rgba(246, 241, 232, 0.86);
   padding: 10px;
 }
 
-.day-column.past {
-  background: rgba(221, 211, 199, 0.9);
+.day-column.odd-day {
+  background: #a9df93;
+  box-shadow: inset 0 0 0 1px rgba(46, 107, 29, 0.28);
+}
+
+.day-column.even-day {
+  background: #99d0eb;
+  box-shadow: inset 0 0 0 1px rgba(24, 91, 126, 0.28);
+}
+
+.day-column.past.odd-day {
+  background: #d6ded1;
+  box-shadow: inset 0 0 0 1px rgba(91, 103, 84, 0.2);
+}
+
+.day-column.past.even-day {
+  background: #d1dbe0;
+  box-shadow: inset 0 0 0 1px rgba(80, 96, 104, 0.2);
 }
 
 .day-column.today {
@@ -531,12 +546,23 @@ h3 {
     0 12px 28px rgba(229, 86, 63, 0.12);
 }
 
-.dark .day-column {
-  background: #2a3036;
+.dark .day-column.odd-day {
+  background: #2d5b26;
+  box-shadow: inset 0 0 0 1px rgba(159, 229, 132, 0.16);
 }
 
-.dark .day-column.past {
-  background: #1b1f24;
+.dark .day-column.even-day {
+  background: #1f5573;
+  box-shadow: inset 0 0 0 1px rgba(148, 215, 249, 0.16);
+}
+
+.dark .day-column.past.odd-day {
+  background: #20251f;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.dark .day-column.past.even-day {
+  background: #1f2529;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 

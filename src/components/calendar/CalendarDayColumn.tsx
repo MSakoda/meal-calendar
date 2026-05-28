@@ -40,9 +40,10 @@ export function CalendarDayColumn({
   const dateKey = toDateKey(day);
   const dayAssignments = assignments.filter((assignment) => assignment.date === dateKey);
   const visibleSlots = isEditMode ? mealTypes : mealTypes.filter((slot) => dayAssignments.some((item) => item.slot === slot));
+  const dayTone = day.getDate() % 2 === 0 ? 'even-day' : 'odd-day';
 
   return (
-    <article className={`day-column ${dayState}`}>
+    <article className={`day-column ${dayState} ${dayTone}`} data-date={dateKey}>
       <div className="day-column-header">
         <h3>{prettyDay(day)}</h3>
         {isEditMode && (

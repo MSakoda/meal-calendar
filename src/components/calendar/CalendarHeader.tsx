@@ -35,6 +35,13 @@ export function CalendarHeader({
   onSetEditMode,
   onSetView,
 }: CalendarHeaderProps) {
+  const goToToday = () => {
+    onSetAnchor(new Date());
+    window.setTimeout(() => {
+      document.querySelector('.day-column.today')?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+    }, 0);
+  };
+
   return (
     <>
       <div className="section-header">
@@ -47,7 +54,7 @@ export function CalendarHeader({
             <button aria-label="Next period" className="icon-button" data-tooltip="Next" onClick={() => onMovePeriod(1)}>
               <ChevronRight size={18} />
             </button>
-            <button className={includesToday ? 'today-button active' : 'today-button'} onClick={() => onSetAnchor(new Date())}>
+            <button className={includesToday ? 'today-button active' : 'today-button'} onClick={goToToday}>
               Today
             </button>
           </div>

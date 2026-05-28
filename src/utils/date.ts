@@ -1,7 +1,7 @@
 import { addDays, endOfMonth, endOfWeek, format, isSameDay, isToday, startOfMonth, startOfWeek } from 'date-fns';
 
 export const toDateKey = (date: Date) => format(date, 'yyyy-MM-dd');
-export const prettyDay = (date: Date) => format(date, 'EEE d');
+export const prettyDay = (date: Date) => format(date, 'EEE, MMM d');
 export const monthTitle = (date: Date) => format(date, 'MMMM yyyy');
 
 export function getWeekDays(anchor: Date) {
